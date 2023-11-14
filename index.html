@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Frontend Mentor | Fylo landing page with two column layout</title>
+
+</head>
+<body>
+
+  <header class="w-full">
+    <nav class="flex justify-between items-center p-8">
+      <a href="#" class="w-24">
+        <img src="./images/logo.svg" alt="">
+      </a>
+      <ul class="flex space-x-4 font-main">
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Sign in</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="p-10">
+    <section class=" flex flex-col space-y-6 items-center py-20">
+      <img class="w-80" src="./images/illustration-1.svg" alt="">
+      <h2 class="text-3xl font-bold text-center font-main">All your files in one secure location, accessible anywhere.</h2>
+      <p class="text-center ">Fylo stores your most important files in one secure location. 
+        Access them wherever you need, share and collaborate with friends, 
+        family, and co-workers.</p>
+      <form class="flex flex-col space-y-4 w-full" action="">
+        <input class="border-2 border-stone-400 rounded p-3 placeholder:text-stone-300" type="email" placeholder="Enter your email" required>
+        <button class="bg-blue-600 text-white font-bold p-3 rounded" type="submit">Get Started</button>
+      </form>  
+    </section>
+    <section class="flex flex-col space-y-6 items-center pt-20">
+      <img src="./images/illustration-2.svg" alt="">
+      <h4 class="font-bold text-xl">Stay productive, wherever you are</h4>
+      <p class="text-stone-500">Never let location be an issue when accessing your files. Fylo has you 
+        covered for all of your file storage needs.</p>
+      <p class="text-stone-500">Securely share files and folders with friends, family and colleagues for 
+        live collaboration. No email attachments required!</p>
+    </section>
+    <section>
+      <div class="">
+        <div class="flex border-b w-fit border-green-700 space-x-1 mx-auto items-center my-8 py-2">
+          <a class="text-green-600" href="#">See how Fylo works</a>
+        <div><img src="./images/icon-arrow.svg" alt=""></div>
+        </div>
+        
+
+        <div class="p-6 shadow-xl flex flex-col space-y-2 justify-start">
+          <img class="w-3" src="./images/icon-quotes.svg" alt="">
+          <p class="text-xs">Fylo has improved our team productivity by an order of magnitude. Since 
+            making the switch our team has become a well-oiled collaboration machine.</p>
+          <div class="flex items-center space-x-2">
+            <div class="w-6">
+              <img class="rounded-full" src="./images/avatar-testimonial.jpg" alt="">
+            </div>
+            <div class="flex flex-col">
+              <h6 class="text-xs font-bold">Kyle Burton</h6>
+              <span class="text-xs text-stone-500">Founder & CEO, Huddle</span>
+            </div>
+          </div> 
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class=" text-white">
+    <div class="flex p-10 bg-desaturated-blue flex-col text center space-y-4 items-center">
+      <h6 class="text-xl font-bold">Get early access today</h6>
+      <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
+      If you have any questions, our support team would be happy to help you.</p>
+      <form class="flex flex-col space-y-4 w-full" action="">
+        <input class="border-2 border-stone-400 rounded p-3 border-none placeholder:text-stone-300" type="email" placeholder="Enter your email" required>
+        <button class="bg-blue-600 text-white font-bold p-3 rounded" type="submit">Get Started For Free</button>
+      </form>
+    </div>
+    <div class="bg-very-dark-blue p-10 text-sm">
+      <div class="pb-4">
+        <img class="" src="./images/logo.svg" alt="">
+      </div>
+      <div class="py-4 space-y-3">
+        <div class=" flex gap-4">
+          <div><img src="./images/icon-phone.svg" alt=""></div>
+          <span>Phone: +1-543-123-4567</span>
+        </div>
+        <div class="flex gap-4">
+          <div>
+            <img src="./images/icon-email.svg" alt="">
+          </div>
+          <span>example@fylo.com</span>
+        </div>
+      </div>
+      <nav class="py-6 space-y-6">
+        <div>
+          <ul class="space-y-2">
+            <li><a href="">About Us</a></li>
+            <li><a href="">Jobs</a></li>
+            <li><a href="">Press</a></li>
+            <li><a href="">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <ul class="space-y-2">
+            <li><a href="">Contact Us</a></li>
+            <li><a href="">Terms</a></li>
+            <li><a href="">Privacy</a></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="py-6 space-x-0">
+        <a class="bg-white text-very-dark-blue rounded-l-full p-5" href="">Facebook</a>
+        <a class="bg-white text-very-dark-blue -mx-1 p-5" href="">Twitter</a>
+        <a class="bg-white text-very-dark-blue rounded-r-full p-5" href="">Intagram</a>
+      </div>
+      <div>
+        <p class="text-xs text-center pt-4">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+        Coded by <a href="#">Leo</a>.
+        </p>
+      </div>
+    </div>
+    
+  </footer>
+
+</body>
+</html>
