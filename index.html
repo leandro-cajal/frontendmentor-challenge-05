@@ -8,14 +8,19 @@
   <link href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
 </head>
 <body>
 
-  <header class="w-full">
+  <header class="w-full max-w-7xl">
     <nav class="flex justify-between items-center p-8">
-      <a href="#" class="w-24">
+      <a href="#" class="w-20">
         <img src="./images/logo.svg" alt="">
       </a>
       <ul class="flex space-x-4 font-main">
@@ -34,12 +39,12 @@
         family, and co-workers.</p>
       <form class="flex flex-col space-y-4 w-full" action="">
         <input class="border-2 border-stone-400 rounded p-3 placeholder:text-stone-300" type="email" placeholder="Enter your email" required>
-        <button class="bg-blue-600 text-white font-bold p-3 rounded" type="submit">Get Started</button>
+        <button class="bg-blue-600 text-white font-bold p-3 rounded hover:bg-blue-400 transition-colors" type="submit">Get Started</button>
       </form>  
     </section>
     <section class="flex flex-col space-y-6 items-center pt-20">
       <img src="./images/illustration-2.svg" alt="">
-      <h4 class="font-bold text-xl">Stay productive, wherever you are</h4>
+      <h4 class="font-bold text-xl font-main">Stay productive, wherever you are</h4>
       <p class="text-stone-500">Never let location be an issue when accessing your files. Fylo has you 
         covered for all of your file storage needs.</p>
       <p class="text-stone-500">Securely share files and folders with friends, family and colleagues for 
@@ -78,12 +83,15 @@
       If you have any questions, our support team would be happy to help you.</p>
       <form class="flex flex-col space-y-4 w-full" action="">
         <input class="border-2 border-stone-400 rounded p-3 border-none placeholder:text-stone-300" type="email" placeholder="Enter your email" required>
-        <button class="bg-blue-600 text-white font-bold p-3 rounded" type="submit">Get Started For Free</button>
+        <button class="bg-blue-600 text-white font-bold p-3 rounded hover:bg-blue-400 transition-colors" type="submit">Get Started For Free</button>
       </form>
     </div>
     <div class="bg-very-dark-blue p-10 text-sm">
       <div class="pb-4">
-        <img class="" src="./images/logo.svg" alt="">
+        <a href="">
+          <img class="" src="./images/logo-white.svg" alt="">
+        </a>
+
       </div>
       <div class="py-4 space-y-3">
         <div class=" flex gap-4">
@@ -100,29 +108,29 @@
       <nav class="py-6 space-y-6">
         <div>
           <ul class="space-y-2">
-            <li><a href="">About Us</a></li>
-            <li><a href="">Jobs</a></li>
-            <li><a href="">Press</a></li>
-            <li><a href="">Blog</a></li>
+            <li><a class="hover:text-blue-400 transition-colors" href="">About Us</a></li>
+            <li><a class="hover:text-blue-400 transition-colors" href="">Jobs</a></li>
+            <li><a class="hover:text-blue-400 transition-colors" href="">Press</a></li>
+            <li><a class="hover:text-blue-400 transition-colors" href="">Blog</a></li>
           </ul>
         </div>
         <div>
           <ul class="space-y-2">
-            <li><a href="">Contact Us</a></li>
-            <li><a href="">Terms</a></li>
-            <li><a href="">Privacy</a></li>
+            <li><a class="hover:text-blue-400 transition-colors" href="">Contact Us</a></li>
+            <li><a class="hover:text-blue-400 transition-colors" href="">Terms</a></li>
+            <li><a class="hover:text-blue-400 transition-colors" href="">Privacy</a></li>
           </ul>
         </div>
       </nav>
-      <div class="py-6 space-x-0">
-        <a class="bg-white text-very-dark-blue rounded-l-full p-5" href="">Facebook</a>
-        <a class="bg-white text-very-dark-blue -mx-1 p-5" href="">Twitter</a>
-        <a class="bg-white text-very-dark-blue rounded-r-full p-5" href="">Intagram</a>
+      <div class="py-6 flex justify-center gap-3">
+        <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-facebook hover:text-moderate-cyan hover:border-moderate-cyan"></i></a>
+        <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-twitter hover:text-moderate-cyan hover:border-moderate-cyan"></i></a>
+        <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-instagram hover:text-moderate-cyan hover:border-moderate-cyan"></i></a>
       </div>
       <div>
         <p class="text-xs text-center pt-4">
         Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a href="#">Leo</a>.
+        Coded by <a class="hover:text-blue-400 transition-colors font-bold" href="#">Leo</a>.
         </p>
       </div>
     </div>
