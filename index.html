@@ -10,55 +10,66 @@
   <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
-
   <title>Frontend Mentor | Fylo landing page with two column layout</title>
 
 </head>
 <body>
 
-  <header class="w-full max-w-7xl">
-    <nav class="flex justify-between items-center p-8">
-      <a href="#" class="w-20">
+  <header class="w-full ">
+    <nav class="mx-auto h-20 flex justify-between items-center p-8 max-w-7xl">
+      <a href="#" class="w-1/3 max-w-[140px]">
         <img src="./images/logo.svg" alt="">
       </a>
-      <ul class="flex space-x-4 font-main">
-        <li><a href="#">Features</a></li>
-        <li><a href="#">Team</a></li>
-        <li><a href="#">Sign in</a></li>
-      </ul>
+      <input type="checkbox" class="peer hidden" id="menu">
+      <label for="menu" class="transition-all z-50 peer-checked:bg-[url('../images/icon-close.svg')] cursor-pointer bg-[url('../images/icon-hamburguer.svg')] w-6 h-5 bg-cover bg-center md:hidden"></label>
+      <div class="peer-checked:translate-x-0 transition-transform translate-x-full fixed inset-0 bg-gradient-to-b from-white/70 to-black/70 md:static md:translate-x-0 md:bg-none z-500">
+        <ul class="absolute inset-x-0 top-24 p-12 bg-white w-[90%] mx-auto rounded-md h-max font-main text-center grid gap-6 font-semibold text-dark-blue shadow-2xl md:w-max md:bg-transparent  md:p-0 md:grid-flow-col md:static">
+          <li><a class="hover:text-blue-600 transition-colors" href="#">Features</a></li>
+          <li><a class="hover:text-blue-600 transition-colors" href="#">Team</a></li>
+          <li><a class="hover:text-blue-600 transition-colors" href="#">Sign in</a></li>
+        </ul>
+      </div>
     </nav>
-  </header>
-  <main class="p-10">
-    <section class=" flex flex-col space-y-6 items-center py-20">
-      <img class="w-80" src="./images/illustration-1.svg" alt="">
-      <h2 class="text-3xl font-bold text-center font-main">All your files in one secure location, accessible anywhere.</h2>
-      <p class="text-center ">Fylo stores your most important files in one secure location. 
+    <section class=" flex flex-col gap-8 items-center py-16 md:flex-row p-8 max-w-7xl mx-auto">
+      <div class="md:w-1/2 md:order-2">
+        <img class="w-full" src="./images/illustration-1.svg" alt="">
+      </div>
+      <div class="flex flex-col gap-4 text-center md:w-1/2 md:text-left">
+        <h2 class="text-2xl font-bold font-main leading-loose md:text-4xl">All your files in one secure location, accessible anywhere.</h2>
+        <p class=" ">Fylo stores your most important files in one secure location. 
         Access them wherever you need, share and collaborate with friends, 
         family, and co-workers.</p>
-      <form class="flex flex-col space-y-4 w-full" action="">
-        <input class="border-2 border-stone-400 rounded p-3 placeholder:text-stone-300" type="email" placeholder="Enter your email" required>
-        <button class="bg-blue-600 text-white font-bold p-3 rounded hover:bg-blue-400 transition-colors" type="submit">Get Started</button>
-      </form>  
+        <form class="flex flex-col gap-4 mx-auto w-full md:flex-row " action="">
+          <input class="border border-stone-400 rounded p-2 placeholder:text-stone-300 md:w-2/3" type="email" placeholder="Enter your email" required>
+          <button class=" bg-blue-600 text-white font-bold p-3 rounded h-full w-full hover:bg-blue-400 transition-colors md:w-1/3" type="submit">Get Started</button>
+        </form>  
+      </div>
     </section>
-    <section class="flex flex-col space-y-6 items-center pt-20">
-      <img src="./images/illustration-2.svg" alt="">
-      <h4 class="font-bold text-xl font-main">Stay productive, wherever you are</h4>
-      <p class="text-stone-500">Never let location be an issue when accessing your files. Fylo has you 
-        covered for all of your file storage needs.</p>
-      <p class="text-stone-500">Securely share files and folders with friends, family and colleagues for 
-        live collaboration. No email attachments required!</p>
-    </section>
-    <section>
-      <div class="">
-        <div class="flex border-b w-fit border-green-700 space-x-1 mx-auto items-center my-8 py-2">
-          <a class="text-green-600" href="#">See how Fylo works</a>
-        <div><img src="./images/icon-arrow.svg" alt=""></div>
+  </header>
+  <div class="w-full">
+    <img class=" hidden sm:block w-full" src="./images/bg-curve-desktop.svg" alt="">
+    <img class="sm:hidden w-full" src="./images/bg-curve-mobile.svg" alt="">
+  </div>
+  <main class="w-full bg-light-grayish-blue py-24">
+    <section class="max-w-7xl mx-auto flex flex-col gap-6 items-center pt-20 md:flex-row md:justify-center">
+      <div class="px-8  mx-auto md:w-1/2 md:order-2">
+        <img class="w-full" src="./images/illustration-2.svg" alt="">
+      </div>
+      <div class="flex flex-col items-center px-8 mx-auto md:w-1/2 md:items-start">
+        <div class="flex flex-col items-center gap-4 md:items-start">
+          <h4 class="font-bold text-lg font-main md:text-3xl">Stay productive, wherever you are</h4>
+          <p class="text-stone-500">Never let location be an issue when accessing your files. Fylo has you 
+            covered for all of your file storage needs.</p>
+          <p class="text-stone-500">Securely share files and folders with friends, family and colleagues for 
+            live collaboration. No email attachments required!</p>
+          <div class="flex border-b w-fit border-green-700 text-green-600 space-x-1 items-center my-8 py-2 hover:opacity-40">
+            <a class=" " href="#">See how Fylo works</a>
+            <div>
+              <img class="hover:opacity-30" src="./images/icon-arrow.svg" alt="">
+            </div>
+          </div>
         </div>
-        
-
-        <div class="p-6 shadow-xl flex flex-col space-y-2 justify-start">
+        <div class="px-6 py-12 shadow-xl flex flex-col gap-4 max-w-xs">
           <img class="w-3" src="./images/icon-quotes.svg" alt="">
           <p class="text-xs">Fylo has improved our team productivity by an order of magnitude. Since 
             making the switch our team has become a well-oiled collaboration machine.</p>
@@ -72,67 +83,78 @@
             </div>
           </div> 
         </div>
-      </div>
-    </section>
+      </div>      
+    </section>  
   </main>
-
   <footer class=" text-white">
-    <div class="flex p-10 bg-desaturated-blue flex-col text center space-y-4 items-center">
-      <h6 class="text-xl font-bold">Get early access today</h6>
-      <p>It only takes a minute to sign up and our free starter tier is extremely generous. 
-      If you have any questions, our support team would be happy to help you.</p>
-      <form class="flex flex-col space-y-4 w-full" action="">
-        <input class="border-2 border-stone-400 rounded p-3 border-none placeholder:text-stone-300" type="email" placeholder="Enter your email" required>
-        <button class="bg-blue-600 text-white font-bold p-3 rounded hover:bg-blue-400 transition-colors" type="submit">Get Started For Free</button>
-      </form>
+    <div class="w-full bg-desaturated-blue">
+      <div class="flex mx-auto p-8  flex-col text-center gap-6 items-center max-w-7xl md:flex-row md:py-24 md:gap-14 md:text-left">
+        <div class="flex flex-col gap-6">
+          <h6 class="text-xl font-bold md:text-3xl">Get early access today</h6>
+          <p class="md:text-lg">It only takes a minute to sign up and our free starter tier is extremely generous. 
+          If you have any questions, our support team would be happy to help you.</p>
+        </div>
+        <div class="w-full flex flex-col items-center">
+          <form class="flex flex-col space-y-4 w-[90%] max-w-lg" action="">
+            <input class="border-2 border-stone-400 rounded p-3 border-none placeholder:text-stone-300 w-full" type="email" placeholder="Enter your email" required>
+            <button class="bg-blue-600 text-white font-bold p-3 rounded hover:bg-blue-400 transition-colors md:px-6 md:me-auto" type="submit">Get Started For Free</button>
+          </form>
+        </div>
+      </div>
+      
+      
     </div>
     <div class="bg-very-dark-blue p-10 text-sm">
-      <div class="pb-4">
-        <a href="">
-          <img class="" src="./images/logo-white.svg" alt="">
-        </a>
-
-      </div>
-      <div class="py-4 space-y-3">
-        <div class=" flex gap-4">
-          <div><img src="./images/icon-phone.svg" alt=""></div>
-          <span>Phone: +1-543-123-4567</span>
+      <div class="max-w-7xl mx-auto">
+        <div class="pb-4">
+          <a href="">
+            <img class="" src="./images/logo-white.svg" alt="">
+          </a>
         </div>
-        <div class="flex gap-4">
-          <div>
-            <img src="./images/icon-email.svg" alt="">
+        <div class="flex flex-col md:flex-row md:justify-between">
+          <div class="py-4 space-y-3">
+            <div class=" flex gap-4">
+              <div><img src="./images/icon-phone.svg" alt=""></div>
+              <span>Phone: +1-543-123-4567</span>
+            </div>
+            <div class="flex gap-4">
+              <div>
+                <img src="./images/icon-email.svg" alt="">
+              </div>
+              <span>example@fylo.com</span>
+            </div>
           </div>
-          <span>example@fylo.com</span>
+          <nav class="flex flex-col py-6 space-y-6 md:flex-row md:justify-between md:mb-auto md:w-1/3 md:space-y-0">
+            <div>
+              <ul class="space-y-2">
+                <li><a class="hover:text-blue-400 transition-colors" href="">About Us</a></li>
+                <li><a class="hover:text-blue-400 transition-colors" href="">Jobs</a></li>
+                <li><a class="hover:text-blue-400 transition-colors" href="">Press</a></li>
+                <li><a class="hover:text-blue-400 transition-colors" href="">Blog</a></li>
+              </ul>
+            </div>
+            <div>
+              <ul class="space-y-2 mb-auto mt-0">
+                <li><a class="hover:text-blue-400 transition-colors" href="">Contact Us</a></li>
+                <li><a class="hover:text-blue-400 transition-colors" href="">Terms</a></li>
+                <li><a class="hover:text-blue-400 transition-colors" href="">Privacy</a></li>
+              </ul>
+            </div>
+          </nav>
+          <div class="py-6 flex justify-center gap-3">
+            <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-facebook hover:text-blue-400 hover:border-blue-400"></i></a>
+            <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-twitter hover:text-blue-400 hover:border-blue-400"></i></a>
+            <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-instagram hover:text-blue-400 hover:border-blue-400"></i></a>
+          </div>
         </div>
+               
       </div>
-      <nav class="py-6 space-y-6">
-        <div>
-          <ul class="space-y-2">
-            <li><a class="hover:text-blue-400 transition-colors" href="">About Us</a></li>
-            <li><a class="hover:text-blue-400 transition-colors" href="">Jobs</a></li>
-            <li><a class="hover:text-blue-400 transition-colors" href="">Press</a></li>
-            <li><a class="hover:text-blue-400 transition-colors" href="">Blog</a></li>
-          </ul>
-        </div>
-        <div>
-          <ul class="space-y-2">
-            <li><a class="hover:text-blue-400 transition-colors" href="">Contact Us</a></li>
-            <li><a class="hover:text-blue-400 transition-colors" href="">Terms</a></li>
-            <li><a class="hover:text-blue-400 transition-colors" href="">Privacy</a></li>
-          </ul>
-        </div>
-      </nav>
-      <div class="py-6 flex justify-center gap-3">
-        <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-facebook hover:text-moderate-cyan hover:border-moderate-cyan"></i></a>
-        <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-twitter hover:text-moderate-cyan hover:border-moderate-cyan"></i></a>
-        <a class="" href=""><i class="p-3 border border-white rounded-full fa-brands fa-instagram hover:text-moderate-cyan hover:border-moderate-cyan"></i></a>
-      </div>
-      <div>
-        <p class="text-xs text-center pt-4">
-        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-        Coded by <a class="hover:text-blue-400 transition-colors font-bold" href="#">Leo</a>.
-        </p>
-      </div>
+    </div>
+    <div class="bg-very-dark-blue py-4">
+      <p class="text-xs text-center pt-4">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a class="hover:text-blue-400 transition-colors font-bold" href="#">Leo</a>.
+      </p>
     </div>
     
   </footer>
